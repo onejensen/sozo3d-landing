@@ -609,6 +609,37 @@
         font-size: 13px;
       }
 
+      /* CTA Contacto */
+      #contact {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 64px;
+        padding: 80px 64px;
+        text-align: left;
+      }
+
+      .cta-contact__title {
+        font-size: 44px;
+        margin-bottom: 12px;
+      }
+
+      .cta-contact__sub {
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+
+      .cta-contact__actions {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 16px;
+      }
+
+      .cta-contact .btn--wa {
+        margin-bottom: 0;
+      }
+
     } /* end @media (min-width: 768px) */
   </style>
 </head>
@@ -720,12 +751,16 @@
 
     <!-- ④ CTA CONTACTO -->
     <section id="contact" class="cta-contact">
-      <h2 class="cta-contact__title">¿Listo para imprimir?</h2>
-      <p class="cta-contact__sub">Escríbenos y te damos presupuesto sin compromiso</p>
-      <a class="btn--wa" href="https://wa.me/34623020424" target="_blank" rel="noopener noreferrer">
-        💬 Escribir por WhatsApp
-      </a>
-      <a class="cta-contact__email" href="mailto:info@sozo3d.es">✉️ info@sozo3d.es</a>
+      <div class="cta-contact__text">
+        <h2 class="cta-contact__title">¿Listo para imprimir?</h2>
+        <p class="cta-contact__sub">Escríbenos y te damos presupuesto sin compromiso</p>
+      </div>
+      <div class="cta-contact__actions">
+        <a class="btn--wa" href="https://wa.me/34623020424" target="_blank" rel="noopener noreferrer">
+          💬 Escribir por WhatsApp
+        </a>
+        <a class="cta-contact__email" href="mailto:info@sozo3d.es">✉️ info@sozo3d.es</a>
+      </div>
     </section>
 
     <!-- ⑤ REDES SOCIALES -->
