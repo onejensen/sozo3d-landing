@@ -98,6 +98,7 @@
   />
   <style>
     /* ── Reset ── */
+    html { scroll-behavior: smooth; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     img { display: block; max-width: 100%; }
     a { text-decoration: none; }
@@ -753,23 +754,8 @@
         object-fit: cover;
         box-shadow: 0 0 80px rgba(232, 119, 34, 0.3);
         border: 3px solid rgba(232, 119, 34, 0.4);
-        transition: transform 0.6s ease;
         will-change: transform;
-      }
-
-      .hero__logo-desktop:hover {
-        animation: logo-swing-3d 1.2s ease-out forwards;
-      }
-
-      @keyframes logo-swing-3d {
-        0%   { transform: rotateY(0deg)   rotateX(0deg); }
-        18%  { transform: rotateY(22deg)  rotateX(6deg); }
-        36%  { transform: rotateY(-16deg) rotateX(-4deg); }
-        52%  { transform: rotateY(10deg)  rotateX(3deg); }
-        66%  { transform: rotateY(-6deg)  rotateX(-2deg); }
-        78%  { transform: rotateY(3deg)   rotateX(1deg); }
-        88%  { transform: rotateY(-1deg)  rotateX(0deg); }
-        100% { transform: rotateY(0deg)   rotateX(0deg); }
+        cursor: pointer;
       }
 
 
@@ -1150,5 +1136,22 @@
       <a class="footer__email" href="mailto:info@sozo3d.es">info@sozo3d.es</a>
     </footer>
   </div>
+  <script>
+    /* ── Hero logo 3D tilt ── */
+    const logo = document.querySelector('.hero__logo-desktop');
+    if (logo) {
+      logo.addEventListener('mousemove', (e) => {
+        const r = logo.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width  - 0.5;
+        const y = (e.clientY - r.top)  / r.height - 0.5;
+        logo.style.transition = 'transform 0.08s ease';
+        logo.style.transform  = `rotateY(${x * 28}deg) rotateX(${-y * 28}deg)`;
+      });
+      logo.addEventListener('mouseleave', () => {
+        logo.style.transition = 'transform 0.7s ease';
+        logo.style.transform  = 'rotateY(0deg) rotateX(0deg)';
+      });
+    }
+  </script>
 </body>
 </html>
