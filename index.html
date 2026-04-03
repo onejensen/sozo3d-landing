@@ -111,7 +111,9 @@
     }
 
     .btn--primary {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       background: var(--orange);
       color: var(--white);
       font-family: var(--font);
@@ -122,7 +124,9 @@
     }
 
     .btn--ghost {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       background: rgba(255,255,255,0.12);
       color: var(--white);
       font-family: var(--font);
@@ -175,8 +179,19 @@
     }
 
     .service-card__icon {
-      font-size: 24px;
-      margin-bottom: 6px;
+      width: 40px;
+      height: 40px;
+      background: var(--orange);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    .service-card__icon svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--white);
     }
 
     .service-card__name {
@@ -217,8 +232,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 17px;
       flex-shrink: 0;
+    }
+    .why__icon svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--white);
     }
 
     .why__text-title {
@@ -256,7 +275,9 @@
     }
 
     .btn--wa {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       background: var(--wa-green);
       color: var(--white);
       font-family: var(--font);
@@ -267,13 +288,24 @@
       margin-bottom: 16px;
     }
 
-    .cta-contact__email {
-      display: inline-block;
-      color: rgba(255,255,255,0.85);
+    .btn--email {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: var(--white);
+      font-family: var(--font);
       font-size: 13px;
-      font-weight: 500;
-      border-bottom: 1px solid rgba(255,255,255,0.5);
-      padding-bottom: 2px;
+      font-weight: 600;
+      padding: 13px 22px;
+      border-radius: 30px;
+    }
+    .btn--email svg {
+      width: 15px;
+      height: 15px;
+      fill: var(--white);
+      flex-shrink: 0;
     }
 
     .section--centered {
@@ -289,14 +321,42 @@
       line-height: 1.5;
     }
 
-    .social__calc-link {
-      display: inline-block;
-      color: var(--orange);
-      font-size: 13px;
-      font-weight: 600;
-      border-bottom: 1px solid var(--orange);
-      padding-bottom: 2px;
+    .btn--calc {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--black2);
+      border: 1px solid #2a2a2a;
+      border-radius: 14px;
+      padding: 18px 22px;
       margin-bottom: 18px;
+    }
+    .btn--calc__icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(232, 119, 34, 0.18);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .btn--calc__icon svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--orange);
+    }
+    .btn--calc__label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--white);
+    }
+    .btn--calc__url {
+      display: block;
+      font-size: 11px;
+      color: var(--orange);
+      margin-top: 1px;
     }
 
     .social__btns {
@@ -327,6 +387,27 @@
       padding: 11px 20px;
       border-radius: 22px;
       border: 1px solid #444;
+    }
+
+    .btn--wa svg,
+    .btn--primary svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--white);
+      flex-shrink: 0;
+    }
+    .btn--instagram svg,
+    .btn--tiktok svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--white);
+      flex-shrink: 0;
+    }
+    .navbar--desktop__cta svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--white);
+      flex-shrink: 0;
     }
 
     /* ── Footer ── */
@@ -570,7 +651,6 @@
       }
 
       .service-card__icon {
-        font-size: 32px;
         margin-bottom: 10px;
       }
 
@@ -607,7 +687,10 @@
         width: 52px;
         height: 52px;
         border-radius: 14px;
-        font-size: 22px;
+      }
+      #why .why__icon svg {
+        width: 24px;
+        height: 24px;
       }
 
       #why .why__text-title {
