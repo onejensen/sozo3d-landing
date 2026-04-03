@@ -73,6 +73,9 @@
     .hero__brand span { color: var(--orange); }
 
     .hero__nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       background: var(--orange);
       color: var(--white);
       font-family: var(--font);
@@ -81,6 +84,12 @@
       padding: 7px 15px;
       border-radius: 20px;
       white-space: nowrap;
+    }
+    .hero__nav-cta svg {
+      width: 13px;
+      height: 13px;
+      fill: var(--white);
+      flex-shrink: 0;
     }
 
     .hero__headline {
