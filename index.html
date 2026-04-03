@@ -231,6 +231,49 @@
       font-size: 11px;
       margin-top: 2px;
     }
+
+    /* ── CTA Contacto ── */
+    .cta-contact {
+      background: linear-gradient(135deg, #1a0800 0%, #E87722 100%);
+      padding: 36px 20px;
+      text-align: center;
+    }
+
+    .cta-contact__title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .cta-contact__sub {
+      color: rgba(255,255,255,0.75);
+      font-size: 13px;
+      font-weight: 400;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .btn--wa {
+      display: inline-block;
+      background: var(--wa-green);
+      color: var(--white);
+      font-family: var(--font);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 14px 30px;
+      border-radius: 30px;
+      margin-bottom: 16px;
+    }
+
+    .cta-contact__email {
+      display: inline-block;
+      color: rgba(255,255,255,0.85);
+      font-size: 13px;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255,255,255,0.5);
+      padding-bottom: 2px;
+    }
   </style>
 </head>
 <body>
@@ -313,6 +356,17 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- ④ CTA CONTACTO -->
+    <section class="cta-contact">
+      <h2 class="cta-contact__title">¿Listo para imprimir?</h2>
+      <p class="cta-contact__sub">Escríbenos y te damos presupuesto sin compromiso</p>
+      <a class="btn--wa" href="https://wa.me/34623020424" target="_blank" rel="noopener noreferrer">
+        💬 Escribir por WhatsApp
+      </a>
+      <br />
+      <a class="cta-contact__email" href="mailto:info@sozo3d.es">✉️ info@sozo3d.es</a>
     </section>
   </div>
 </body>
