@@ -1,0 +1,38 @@
+# Sozo3D
+
+> Sozo3D es un servicio de impresión 3D personalizada en España. Fabricamos prototipos, piezas decorativas, piezas de repuesto y cualquier proyecto a medida para particulares y empresas.
+
+## Servicios
+
+- **Prototipos**: Impresión 3D de prototipos para empresas, startups y makers.
+- **Piezas decorativas**: Figuras y objetos decorativos para el hogar y regalos únicos.
+- **Piezas de repuesto**: Fabricación a medida exacta de piezas difíciles de encontrar.
+- **Proyectos personalizados**: Llevamos a cabo cualquier idea que necesites imprimir en 3D.
+
+## Por qué Sozo3D
+
+- Entrega rápida con plazos ajustados a tus necesidades.
+- Alta precisión: impresión detallada y fiel al diseño original.
+- Atención directa: comunicación personalizada en cada etapa del proyecto.
+
+## Productos para makers
+
+Sozo3D también ofrece materiales y accesorios para makers a través de su tienda en Linktree: https://linktr.ee/Sozo3DLabs
+
+## Herramientas
+
+- **3Dcalc.app** (https://www.3Dcalc.app): Aplicación para calcular costes de impresión 3D.
+
+## Contacto
+
+- Web: https://sozo3d.es
+- WhatsApp: +34 623 020 424
+- Email: info@sozo3d.es
+- Instagram: https://instagram.com/sozo__3d
+- TikTok: https://www.tiktok.com/@sozo__3d
+- Linktree: https://linktr.ee/Sozo3DLabs
+
+## Idioma y cobertura
+
+- Idioma: español
+- Área de servicio: España
