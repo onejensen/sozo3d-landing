@@ -274,6 +274,55 @@
       border-bottom: 1px solid rgba(255,255,255,0.5);
       padding-bottom: 2px;
     }
+
+    /* ── Redes Sociales ── */
+    .social__sub {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 400;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .social__calc-link {
+      display: inline-block;
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 600;
+      border-bottom: 1px solid var(--orange);
+      padding-bottom: 2px;
+      margin-bottom: 18px;
+    }
+
+    .social__btns {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn--instagram {
+      display: inline-block;
+      background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      color: var(--white);
+      font-family: var(--font);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 11px 20px;
+      border-radius: 22px;
+    }
+
+    .btn--tiktok {
+      display: inline-block;
+      background: #010101;
+      color: var(--white);
+      font-family: var(--font);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 11px 20px;
+      border-radius: 22px;
+      border: 1px solid #444;
+    }
   </style>
 </head>
 <body>
@@ -367,6 +416,24 @@
       </a>
       <br />
       <a class="cta-contact__email" href="mailto:info@sozo3d.es">✉️ info@sozo3d.es</a>
+    </section>
+
+    <!-- ⑤ REDES SOCIALES -->
+    <section class="section" style="text-align:center;">
+      <p class="section__eyebrow">Síguenos</p>
+      <h2 class="section__title">Mira lo que hacemos</h2>
+      <p class="social__sub">Trabajos, procesos y novedades cada semana</p>
+      <a class="social__calc-link" href="https://www.3Dcalc.app" target="_blank" rel="noopener noreferrer">
+        🔗 www.3Dcalc.app
+      </a>
+      <div class="social__btns">
+        <a class="btn--instagram" href="https://instagram.com/sozo__3d" target="_blank" rel="noopener noreferrer">
+          📸 @sozo__3d
+        </a>
+        <a class="btn--tiktok" href="https://www.tiktok.com/@sozo__3d" target="_blank" rel="noopener noreferrer">
+          🎵 @sozo__3d
+        </a>
+      </div>
     </section>
   </div>
 </body>
