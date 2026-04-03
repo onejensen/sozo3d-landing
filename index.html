@@ -1144,11 +1144,11 @@
         const r = logo.getBoundingClientRect();
         const x = (e.clientX - r.left) / r.width  - 0.5;
         const y = (e.clientY - r.top)  / r.height - 0.5;
-        logo.style.transition = 'transform 0.08s ease';
-        logo.style.transform  = `rotateY(${x * 28}deg) rotateX(${-y * 28}deg)`;
+        logo.style.transition = 'transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        logo.style.transform  = `rotateY(${x * 18}deg) rotateX(${-y * 18}deg)`;
       });
       logo.addEventListener('mouseleave', () => {
-        logo.style.transition = 'transform 0.7s ease';
+        logo.style.transition = 'transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
         logo.style.transform  = 'rotateY(0deg) rotateX(0deg)';
       });
     }
