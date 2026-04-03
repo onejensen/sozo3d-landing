@@ -1140,17 +1140,31 @@
     /* ── Hero logo 3D tilt ── */
     const logo = document.querySelector('.hero__logo-desktop');
     if (logo) {
+      let tX = 0, tY = 0, cX = 0, cY = 0, raf = null;
+
+      function lerp(a, b, t) { return a + (b - a) * t; }
+
+      function tick() {
+        cX = lerp(cX, tX, 0.07);
+        cY = lerp(cY, tY, 0.07);
+        logo.style.transform = `rotateY(${cX}deg) rotateX(${cY}deg)`;
+        if (Math.abs(cX - tX) > 0.02 || Math.abs(cY - tY) > 0.02) {
+          raf = requestAnimationFrame(tick);
+        } else {
+          logo.style.transform = `rotateY(${tX}deg) rotateX(${tY}deg)`;
+          raf = null;
+        }
+      }
+
+      function startTick() { if (!raf) raf = requestAnimationFrame(tick); }
+
       logo.addEventListener('mousemove', (e) => {
         const r = logo.getBoundingClientRect();
-        const x = (e.clientX - r.left) / r.width  - 0.5;
-        const y = (e.clientY - r.top)  / r.height - 0.5;
-        logo.style.transition = 'transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-        logo.style.transform  = `rotateY(${x * 18}deg) rotateX(${-y * 18}deg)`;
+        tX = ((e.clientX - r.left) / r.width  - 0.5) * 18;
+        tY = ((e.clientY - r.top)  / r.height - 0.5) * -18;
+        startTick();
       });
-      logo.addEventListener('mouseleave', () => {
-        logo.style.transition = 'transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-        logo.style.transform  = 'rotateY(0deg) rotateX(0deg)';
-      });
+      logo.addEventListener('mouseleave', () => { tX = 0; tY = 0; startTick(); });
     }
   </script>
 </body>
