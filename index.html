@@ -368,7 +368,7 @@
     .navbar--desktop { display: none; }
 
     /* ── Hero new elements (mobile base) ── */
-    .hero__visual    { display: none; }
+    .hero__visual { display: none; }
     .hero__eyebrow-pill { display: none; }
 
     /* ── Desktop centering shadow ── */
@@ -534,8 +534,9 @@
       }
 
       .hero__logo-desktop {
-        width: 340px;
-        height: 340px;
+        width: min(340px, 100%);
+        height: auto;
+        aspect-ratio: 1;
         border-radius: 50%;
         object-fit: cover;
         box-shadow: 0 0 80px rgba(232, 119, 34, 0.3);
@@ -590,7 +591,7 @@
 
       <!-- Right column — desktop only -->
       <div class="hero__visual">
-        <img class="hero__logo-desktop" src="assets/Logo_Sozo3D.jpg" alt="Sozo3D" />
+        <img class="hero__logo-desktop" src="assets/Logo_Sozo3D.jpg" alt="Sozo3D logo" />
       </div>
     </section>
 
