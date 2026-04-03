@@ -741,6 +741,10 @@
         display: none;
       }
 
+      .hero__visual {
+        perspective: 700px;
+      }
+
       .hero__logo-desktop {
         width: min(340px, 100%);
         height: auto;
@@ -749,6 +753,23 @@
         object-fit: cover;
         box-shadow: 0 0 80px rgba(232, 119, 34, 0.3);
         border: 3px solid rgba(232, 119, 34, 0.4);
+        transition: transform 0.6s ease;
+        will-change: transform;
+      }
+
+      .hero__logo-desktop:hover {
+        animation: logo-swing-3d 1.2s ease-out forwards;
+      }
+
+      @keyframes logo-swing-3d {
+        0%   { transform: rotateY(0deg)   rotateX(0deg); }
+        18%  { transform: rotateY(22deg)  rotateX(6deg); }
+        36%  { transform: rotateY(-16deg) rotateX(-4deg); }
+        52%  { transform: rotateY(10deg)  rotateX(3deg); }
+        66%  { transform: rotateY(-6deg)  rotateX(-2deg); }
+        78%  { transform: rotateY(3deg)   rotateX(1deg); }
+        88%  { transform: rotateY(-1deg)  rotateX(0deg); }
+        100% { transform: rotateY(0deg)   rotateX(0deg); }
       }
 
 
