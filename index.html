@@ -327,6 +327,42 @@
       border-radius: 22px;
       border: 1px solid #444;
     }
+
+    /* ── Footer ── */
+    .footer {
+      background: var(--dark);
+      padding: 24px 20px;
+      text-align: center;
+      border-top: 1px solid #1e1e1e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer__logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .footer__brand {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .footer__brand span { color: var(--orange); }
+
+    .footer__email {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .footer__copy {
+      color: #333;
+      font-size: 10px;
+    }
   </style>
 </head>
 <body>
@@ -438,6 +474,14 @@
         </a>
       </div>
     </section>
+
+    <!-- ⑥ FOOTER -->
+    <footer class="footer">
+      <img class="footer__logo" src="assets/Logo_Sozo3D.jpg" alt="Sozo3D" />
+      <div class="footer__brand">Sozo<span>3D</span></div>
+      <a class="footer__email" href="mailto:info@sozo3d.es">info@sozo3d.es</a>
+      <p class="footer__copy">© 2025 Sozo3D · Impresión 3D personalizada</p>
+    </footer>
   </div>
 </body>
 </html>
