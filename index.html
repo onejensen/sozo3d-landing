@@ -364,6 +364,9 @@
       font-size: 11px;
     }
 
+    /* ── Desktop navbar (hidden on mobile) ── */
+    .navbar--desktop { display: none; }
+
     /* ── Desktop centering shadow ── */
     @media (min-width: 500px) {
       .page {
@@ -381,10 +384,104 @@
       .hero__btns { flex-direction: column; align-items: center; }
       .social__btns { flex-direction: column; align-items: center; }
     }
+
+    /* ══════════════════════════════════════
+       DESKTOP LAYOUT — min-width: 768px
+       Additive only. Mobile CSS untouched.
+       ══════════════════════════════════════ */
+    @media (min-width: 768px) {
+
+      /* Page wrapper */
+      .page {
+        max-width: 1280px;
+      }
+
+      /* Desktop navbar */
+      .navbar--desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        height: 64px;
+        padding: 0 64px;
+        background: rgba(15, 15, 15, 0.88);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid #1e1e1e;
+      }
+
+      .navbar--desktop__left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .navbar--desktop__logo {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--orange);
+        flex-shrink: 0;
+      }
+
+      .navbar--desktop__brand {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--white);
+      }
+      .navbar--desktop__brand span { color: var(--orange); }
+
+      .navbar--desktop__links {
+        display: flex;
+        gap: 32px;
+      }
+
+      .navbar--desktop__links a {
+        color: rgba(255, 255, 255, 0.7);
+        font-family: var(--font);
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .navbar--desktop__links a:hover {
+        color: var(--white);
+      }
+
+      .navbar--desktop__cta {
+        display: inline-block;
+        background: var(--orange);
+        color: var(--white);
+        font-family: var(--font);
+        font-size: 13px;
+        font-weight: 600;
+        padding: 8px 20px;
+        border-radius: 20px;
+        white-space: nowrap;
+      }
+
+    } /* end @media (min-width: 768px) */
   </style>
 </head>
 <body>
   <div class="page">
+    <nav class="navbar--desktop">
+      <div class="navbar--desktop__left">
+        <img class="navbar--desktop__logo" src="assets/Logo_Sozo3D.jpg" alt="Sozo3D logo" />
+        <span class="navbar--desktop__brand">Sozo<span>3D</span></span>
+      </div>
+      <div class="navbar--desktop__links">
+        <a href="#servicios">Servicios</a>
+        <a href="#why">¿Por qué nosotros?</a>
+        <a href="#social">Síguenos</a>
+        <a href="#contact">Contacto</a>
+      </div>
+      <a class="navbar--desktop__cta" href="https://wa.me/34623020424" target="_blank" rel="noopener noreferrer">
+        💬 WhatsApp
+      </a>
+    </nav>
     <!-- ① HERO -->
     <section class="hero">
       <nav class="hero__nav">
@@ -437,7 +534,7 @@
     </section>
 
     <!-- ③ POR QUÉ SOZO3D -->
-    <section class="section">
+    <section id="why" class="section">
       <p class="section__eyebrow">¿Por qué elegirnos?</p>
       <h2 class="section__title">Calidad que se nota</h2>
       <div class="why__list">
@@ -466,7 +563,7 @@
     </section>
 
     <!-- ④ CTA CONTACTO -->
-    <section class="cta-contact">
+    <section id="contact" class="cta-contact">
       <h2 class="cta-contact__title">¿Listo para imprimir?</h2>
       <p class="cta-contact__sub">Escríbenos y te damos presupuesto sin compromiso</p>
       <a class="btn--wa" href="https://wa.me/34623020424" target="_blank" rel="noopener noreferrer">
@@ -476,7 +573,7 @@
     </section>
 
     <!-- ⑤ REDES SOCIALES -->
-    <section class="section section--centered">
+    <section id="social" class="section section--centered">
       <p class="section__eyebrow">Síguenos</p>
       <h2 class="section__title">Mira lo que hacemos</h2>
       <p class="social__sub">Trabajos, procesos y novedades cada semana</p>
