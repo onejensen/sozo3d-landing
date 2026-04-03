@@ -640,6 +640,48 @@
         margin-bottom: 0;
       }
 
+      /* Redes Sociales */
+      #social {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        padding: 80px 64px;
+        text-align: left;
+      }
+
+      #social .social__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      #social .section__title {
+        font-size: 36px;
+        margin-bottom: 12px;
+      }
+
+      #social .social__sub {
+        font-size: 14px;
+        margin-bottom: 16px;
+      }
+
+      #social .social__btns {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        justify-content: center;
+        align-items: stretch;
+      }
+
+      #social .btn--instagram,
+      #social .btn--tiktok {
+        display: block;
+        padding: 24px 28px;
+        border-radius: 16px;
+        font-size: 16px;
+        text-align: left;
+      }
+
     } /* end @media (min-width: 768px) */
   </style>
 </head>
@@ -765,12 +807,14 @@
 
     <!-- ⑤ REDES SOCIALES -->
     <section id="social" class="section section--centered">
-      <p class="section__eyebrow">Síguenos</p>
-      <h2 class="section__title">Mira lo que hacemos</h2>
-      <p class="social__sub">Trabajos, procesos y novedades cada semana</p>
-      <a class="social__calc-link" href="https://www.3Dcalc.app" target="_blank" rel="noopener noreferrer">
-        🔗 www.3Dcalc.app
-      </a>
+      <div class="social__info">
+        <p class="section__eyebrow">Síguenos</p>
+        <h2 class="section__title">Mira lo que hacemos</h2>
+        <p class="social__sub">Trabajos, procesos y novedades cada semana</p>
+        <a class="social__calc-link" href="https://www.3Dcalc.app" target="_blank" rel="noopener noreferrer">
+          🔗 www.3Dcalc.app
+        </a>
+      </div>
       <div class="social__btns">
         <a class="btn--instagram" href="https://instagram.com/sozo__3d" target="_blank" rel="noopener noreferrer">
           📸 @sozo__3d
