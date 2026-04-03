@@ -363,6 +363,24 @@
       color: #666;
       font-size: 10px;
     }
+
+    /* ── Desktop centering shadow ── */
+    @media (min-width: 500px) {
+      .page {
+        box-shadow: 0 0 60px rgba(232,119,34,0.1);
+        min-height: 100vh;
+      }
+      body {
+        background: #070707;
+      }
+    }
+
+    /* ── Small phones (< 360px) ── */
+    @media (max-width: 359px) {
+      .hero__headline { font-size: 34px; }
+      .hero__btns { flex-direction: column; align-items: center; }
+      .social__btns { flex-direction: column; align-items: center; }
+    }
   </style>
 </head>
 <body>
