@@ -403,6 +403,26 @@
       border: 1px solid #444;
     }
 
+    .btn--linktree {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #43E55E;
+      color: #000;
+      font-family: var(--font);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 11px 20px;
+      border-radius: 22px;
+    }
+    .btn--linktree svg {
+      width: 18px;
+      height: 18px;
+      fill: #000;
+      flex-shrink: 0;
+    }
+
     .btn--wa svg,
     .btn--primary svg {
       width: 16px;
@@ -776,7 +796,8 @@
       }
 
       #social .btn--instagram,
-      #social .btn--tiktok {
+      #social .btn--tiktok,
+      #social .btn--linktree {
         display: flex;
         padding: 24px 28px;
         border-radius: 16px;
@@ -848,6 +869,9 @@
     </symbol>
     <symbol id="icon-tiktok" viewBox="0 0 24 24">
       <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/>
+    </symbol>
+    <symbol id="icon-linktree" viewBox="0 0 24 24">
+      <path d="M13.51 5.753l3.57-3.464 1.535 1.572-3.693 3.593H19v2.138h-4.715l.007.008L19 14.05l-1.536 1.572-4.964-5.1V22h-2.067V10.522L5.47 15.622 3.934 14.05l4.708-4.45H4V7.462h4.162L4.47 3.862 6.004 2.29l3.443 3.342V0h2.064v5.753z"/>
     </symbol>
   </svg>
   <div class="page">
@@ -999,6 +1023,10 @@
         <a class="btn--tiktok" href="https://www.tiktok.com/@sozo__3d" target="_blank" rel="noopener noreferrer">
           <svg aria-hidden="true"><use href="#icon-tiktok"></use></svg>
           @sozo__3d
+        </a>
+        <a class="btn--linktree" href="https://linktr.ee/Sozo3DLabs" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true"><use href="#icon-linktree"></use></svg>
+          Sozo3DLabs
         </a>
       </div>
     </section>
