@@ -41,12 +41,119 @@
       max-width: 480px;
       margin: 0 auto;
     }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(160deg, #1a1a1a 0%, #2a1200 55%, #E87722 100%);
+      padding: 24px 20px 36px;
+    }
+
+    .hero__nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 28px;
+    }
+
+    .hero__logo {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--orange);
+      flex-shrink: 0;
+    }
+
+    .hero__brand {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .hero__brand span { color: var(--orange); }
+
+    .hero__nav-cta {
+      background: var(--orange);
+      color: var(--white);
+      font-family: var(--font);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 7px 15px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .hero__headline {
+      font-size: clamp(40px, 10vw, 56px);
+      font-weight: 700;
+      line-height: 1.0;
+      color: var(--white);
+      text-align: center;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .hero__headline span { color: var(--orange); }
+
+    .hero__sub {
+      text-align: center;
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+      font-weight: 400;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .hero__btns {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn--primary {
+      background: var(--orange);
+      color: var(--white);
+      font-family: var(--font);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 13px 22px;
+      border-radius: 30px;
+    }
+
+    .btn--ghost {
+      background: rgba(255,255,255,0.12);
+      color: var(--white);
+      font-family: var(--font);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 13px 22px;
+      border-radius: 30px;
+    }
   </style>
 </head>
 <body>
   <div class="page">
-    <!-- sections go here -->
-    <p style="color:#E87722;padding:2rem;text-align:center;">Sozo3D — En construcción</p>
+    <!-- ① HERO -->
+    <section class="hero">
+      <nav class="hero__nav">
+        <img class="hero__logo" src="assets/Logo_Sozo3D.jpg" alt="Sozo3D logo" />
+        <span class="hero__brand">Sozo<span>3D</span></span>
+        <a class="hero__nav-cta" href="https://wa.me/34623020424" target="_blank" rel="noopener">
+          📱 WhatsApp
+        </a>
+      </nav>
+
+      <h1 class="hero__headline">
+        IMPRIME<br><span>TU IDEA</span><br>EN 3D
+      </h1>
+      <p class="hero__sub">Impresión 3D personalizada para particulares y empresas</p>
+
+      <div class="hero__btns">
+        <a class="btn--primary" href="https://wa.me/34623020424" target="_blank" rel="noopener">
+          💬 Pedir presupuesto
+        </a>
+        <a class="btn--ghost" href="#servicios">Ver trabajos ↓</a>
+      </div>
+    </section>
   </div>
 </body>
 </html>
