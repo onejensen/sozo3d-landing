@@ -130,6 +130,70 @@
       padding: 13px 22px;
       border-radius: 30px;
     }
+
+    /* ── Shared section styles ── */
+    .section {
+      background: var(--black);
+      padding: 28px 20px;
+      border-top: 1px solid #1e1e1e;
+    }
+
+    .section__eyebrow {
+      color: var(--orange);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .section__title {
+      color: var(--white);
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    /* ── Servicios grid ── */
+    .services__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .service-card {
+      background: var(--black2);
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 16px 12px;
+      text-align: center;
+    }
+
+    .service-card--highlight {
+      border-color: var(--orange);
+    }
+
+    .service-card__icon {
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+
+    .service-card__name {
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .service-card--highlight .service-card__name {
+      color: var(--orange);
+    }
+
+    .service-card__desc {
+      color: var(--muted);
+      font-size: 10px;
+      margin-top: 3px;
+      line-height: 1.4;
+    }
   </style>
 </head>
 <body>
@@ -154,6 +218,34 @@
           💬 Pedir presupuesto
         </a>
         <a class="btn--ghost" href="#servicios">Ver trabajos ↓</a>
+      </div>
+    </section>
+
+    <!-- ② SERVICIOS -->
+    <section id="servicios" class="section">
+      <p class="section__eyebrow">Servicios</p>
+      <h2 class="section__title">¿Qué podemos imprimir?</h2>
+      <div class="services__grid">
+        <div class="service-card">
+          <div class="service-card__icon">🏗️</div>
+          <div class="service-card__name">Prototipos</div>
+          <div class="service-card__desc">Empresas y makers</div>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">🎨</div>
+          <div class="service-card__name">Piezas decorativas</div>
+          <div class="service-card__desc">Hogar y regalos únicos</div>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">🔧</div>
+          <div class="service-card__name">Piezas de repuesto</div>
+          <div class="service-card__desc">A tu medida exacta</div>
+        </div>
+        <div class="service-card service-card--highlight">
+          <div class="service-card__icon">💡</div>
+          <div class="service-card__name">Tu idea aquí</div>
+          <div class="service-card__desc">Cuéntanos qué necesitas</div>
+        </div>
       </div>
     </section>
   </div>
