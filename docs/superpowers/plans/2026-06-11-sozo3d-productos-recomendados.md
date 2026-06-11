@@ -224,6 +224,7 @@ En `index.html`, dentro del bloque `<style>`, justo **antes** del comentario `/*
       font-size: 11px;
       line-height: 1.4;
       margin-top: 4px;
+      margin-bottom: 11px;
     }
 
     .product-card__btn {
@@ -239,10 +240,9 @@ En `index.html`, dentro del bloque `<style>`, justo **antes** del comentario `/*
       font-weight: 600;
       border-radius: 20px;
     }
-    .product-card__desc { margin-bottom: 11px; }
 ```
 
-> Nota: `margin-top: auto` empuja el botón al fondo de la tarjeta para que queden alineados aunque las descripciones tengan distinta longitud (las tarjetas de una misma fila comparten altura por `align-items: stretch` del grid). El `margin-bottom` en `.product-card__desc` garantiza una separación mínima sobre el botón cuando el texto es corto.
+> Nota: `margin-top: auto` empuja el botón al fondo de la tarjeta para que queden alineados aunque las descripciones tengan distinta longitud (las tarjetas de una misma fila comparten altura por `align-items: stretch` del grid). El `margin-bottom` de `.product-card__desc` garantiza una separación mínima sobre el botón.
 
 - [ ] **Step 3: Añadir el CSS de escritorio**
 
