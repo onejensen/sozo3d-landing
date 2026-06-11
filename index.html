@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sozo3D — Impresión 3D Personalizada</title>
-  <meta name="description" content="Impresión 3D personalizada para particulares y empresas en España. Prototipos, piezas decorativas, repuestos y proyectos a medida. Presupuesto sin compromiso por WhatsApp." />
+  <meta name="description" content="Impresión 3D personalizada para particulares y empresas en España. Prototipos, piezas decorativas, repuestos y proyectos a medida. Presupuesto sin compromiso por email." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://sozo3d.es/" />
 
@@ -33,7 +33,6 @@
     "url": "https://sozo3d.es",
     "logo": "https://sozo3d.es/assets/Logo_Sozo3D.jpg",
     "image": "https://sozo3d.es/assets/Logo_Sozo3D.jpg",
-    "telephone": "+34623020424",
     "email": "info@sozo3d.es",
     "priceRange": "€€",
     "areaServed": { "@type": "Country", "name": "España" },
@@ -44,7 +43,6 @@
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+34623020424",
       "email": "info@sozo3d.es",
       "contactType": "customer service",
       "availableLanguage": "Spanish"
@@ -112,7 +110,6 @@
       --white:    #ffffff;
       --muted:    #888888;
       --font:     'Clash Display', sans-serif;
-      --wa-green: #25D366;
     }
 
     /* ── Base ── */
@@ -370,20 +367,6 @@
       line-height: 1.5;
     }
 
-    .btn--wa {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--wa-green);
-      color: var(--white);
-      font-family: var(--font);
-      font-size: 14px;
-      font-weight: 700;
-      padding: 14px 30px;
-      border-radius: 30px;
-      margin-bottom: 16px;
-    }
-
     .btn--email {
       display: inline-flex;
       align-items: center;
@@ -515,7 +498,6 @@
       flex-shrink: 0;
     }
 
-    .btn--wa svg,
     .btn--primary svg,
     .btn--ghost svg {
       width: 16px;
@@ -966,10 +948,6 @@
         gap: 16px;
       }
 
-      .cta-contact .btn--wa {
-        margin-bottom: 0;
-      }
-
       /* Redes Sociales */
       #social {
         display: grid;
@@ -1060,9 +1038,6 @@
 <body>
   <!-- ══ SVG Icon Sprite ══ -->
   <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
-    <symbol id="icon-wa" viewBox="0 0 24 24">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.136.558 4.14 1.534 5.876L0 24l6.31-1.518A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-4.997-1.371l-.358-.214-3.747.901.947-3.638-.234-.374A9.773 9.773 0 012.182 12C2.182 6.57 6.569 2.182 12 2.182S21.818 6.57 21.818 12 17.431 21.818 12 21.818z"/>
-    </symbol>
     <symbol id="icon-envelope" viewBox="0 0 24 24">
       <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
     </symbol>
@@ -1113,9 +1088,9 @@
         <a href="#recomendados">Recomendados</a>
         <a href="#social">Síguenos</a>
       </div>
-      <a class="navbar--desktop__cta" href="https://wa.me/34623020424" target="_blank" rel="noopener noreferrer">
-        <svg aria-hidden="true"><use href="#icon-wa"></use></svg>
-        WhatsApp
+      <a class="navbar--desktop__cta" href="mailto:info@sozo3d.es">
+        <svg aria-hidden="true"><use href="#icon-envelope"></use></svg>
+        Email
       </a>
     </nav>
     <!-- ① HERO -->
@@ -1124,9 +1099,9 @@
       <nav class="hero__nav">
         <img class="hero__logo" src="assets/Logo_Sozo3D.jpg" alt="Sozo3D logo" />
         <span class="hero__brand">Sozo<span>3D</span></span>
-        <a class="hero__nav-cta" href="https://wa.me/34623020424" target="_blank" rel="noopener noreferrer">
-          <svg aria-hidden="true"><use href="#icon-wa"></use></svg>
-          WhatsApp
+        <a class="hero__nav-cta" href="mailto:info@sozo3d.es">
+          <svg aria-hidden="true"><use href="#icon-envelope"></use></svg>
+          Email
         </a>
       </nav>
 
@@ -1138,8 +1113,8 @@
         </h1>
         <p class="hero__sub">Impresión 3D personalizada para particulares y empresas</p>
         <div class="hero__btns">
-          <a class="btn--primary" href="https://wa.me/34623020424" target="_blank" rel="noopener noreferrer">
-            <svg aria-hidden="true"><use href="#icon-wa"></use></svg>
+          <a class="btn--primary" href="mailto:info@sozo3d.es">
+            <svg aria-hidden="true"><use href="#icon-envelope"></use></svg>
             Pedir presupuesto
           </a>
           <a class="btn--ghost" href="mailto:info@sozo3d.es">
@@ -1219,13 +1194,9 @@
         <p class="cta-contact__sub">Escríbenos y te damos presupuesto sin compromiso</p>
       </div>
       <div class="cta-contact__actions">
-        <a class="btn--wa" href="https://wa.me/34623020424" target="_blank" rel="noopener noreferrer">
-          <svg aria-hidden="true"><use href="#icon-wa"></use></svg>
-          Escribir por WhatsApp
-        </a>
         <a class="btn--email" href="mailto:info@sozo3d.es">
           <svg aria-hidden="true"><use href="#icon-envelope"></use></svg>
-          info@sozo3d.es
+          Escríbenos a info@sozo3d.es
         </a>
       </div>
     </section>
