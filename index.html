@@ -1312,6 +1312,65 @@
       });
       logo.addEventListener('mouseleave', () => { tX = 0; tY = 0; startTick(); });
     }
+
+    /* ── Productos recomendados ── */
+    (function () {
+      const grid = document.getElementById('reco-grid');
+      if (!grid) return;
+
+      const TIENDAS = {
+        amazon:     { etiqueta: 'Amazon',     boton: 'Ver en Amazon' },
+        aliexpress: { etiqueta: 'AliExpress', boton: 'Ver en AliExpress' }
+      };
+
+      function escapeHTML(str) {
+        return String(str == null ? '' : str)
+          .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+      }
+
+      function cardHTML(p) {
+        const tienda = TIENDAS[p.tienda] || { etiqueta: 'Ver', boton: 'Ver producto' };
+        const claseTienda = TIENDAS[p.tienda] ? p.tienda : 'otra';
+        const nombre = escapeHTML(p.nombre);
+        const media = p.imagen
+          ? '<img src="' + escapeHTML(p.imagen) + '" alt="' + nombre + '" loading="lazy" onerror="this.remove()">'
+          : '';
+        const sello = p.sello ? '<span class="product-card__badge">' + escapeHTML(p.sello) + '</span>' : '';
+        const desc = p.descripcion ? '<p class="product-card__desc">' + escapeHTML(p.descripcion) + '</p>' : '';
+        return ''
+          + '<a class="product-card" href="' + escapeHTML(p.enlace) + '" target="_blank" rel="sponsored nofollow noopener">'
+          +   '<div class="product-card__media">'
+          +     media
+          +     '<span class="product-card__store product-card__store--' + claseTienda + '">' + escapeHTML(tienda.etiqueta) + '</span>'
+          +   '</div>'
+          +   '<div class="product-card__body">'
+          +     sello
+          +     '<div class="product-card__name">' + nombre + '</div>'
+          +     desc
+          +     '<span class="product-card__btn">' + escapeHTML(tienda.boton) + ' →</span>'
+          +   '</div>'
+          + '</a>';
+      }
+
+      fetch('productos.json')
+        .then(function (r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return r.json();
+        })
+        .then(function (data) {
+          const items = (data && Array.isArray(data.productos)) ? data.productos : [];
+          if (!items.length) {
+            grid.innerHTML = '<p class="reco__empty">Pronto añadiremos recomendaciones.</p>';
+            return;
+          }
+          grid.innerHTML = items.map(cardHTML).join('');
+        })
+        .catch(function (err) {
+          console.warn('No se pudieron cargar los productos:', err);
+          grid.innerHTML = '<p class="reco__empty">Pronto añadiremos recomendaciones.</p>';
+        });
+    })();
   </script>
 </body>
 </html>
