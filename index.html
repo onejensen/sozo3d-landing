@@ -1329,6 +1329,11 @@
           .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
       }
 
+      function safeHref(url) {
+        const s = String(url == null ? '' : url).trim();
+        return /^https?:\/\//i.test(s) ? escapeHTML(s) : '#';
+      }
+
       function cardHTML(p) {
         const tienda = TIENDAS[p.tienda] || { etiqueta: 'Ver', boton: 'Ver producto' };
         const claseTienda = TIENDAS[p.tienda] ? p.tienda : 'otra';
@@ -1339,7 +1344,7 @@
         const sello = p.sello ? '<span class="product-card__badge">' + escapeHTML(p.sello) + '</span>' : '';
         const desc = p.descripcion ? '<p class="product-card__desc">' + escapeHTML(p.descripcion) + '</p>' : '';
         return ''
-          + '<a class="product-card" href="' + escapeHTML(p.enlace) + '" target="_blank" rel="sponsored nofollow noopener">'
+          + '<a class="product-card" href="' + safeHref(p.enlace) + '" target="_blank" rel="sponsored nofollow noopener">'
           +   '<div class="product-card__media">'
           +     media
           +     '<span class="product-card__store product-card__store--' + claseTienda + '">' + escapeHTML(tienda.etiqueta) + '</span>'
@@ -1348,7 +1353,7 @@
           +     sello
           +     '<div class="product-card__name">' + nombre + '</div>'
           +     desc
-          +     '<span class="product-card__btn">' + escapeHTML(tienda.boton) + ' →</span>'
+          +     '<span class="product-card__btn">' + escapeHTML(tienda.boton) + ' <span aria-hidden="true">→</span></span>'
           +   '</div>'
           + '</a>';
       }
