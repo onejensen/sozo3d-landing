@@ -1336,7 +1336,7 @@
 
       function cardHTML(p) {
         const tienda = TIENDAS[p.tienda] || { etiqueta: 'Ver', boton: 'Ver producto' };
-        const claseTienda = TIENDAS[p.tienda] ? p.tienda : 'otra';
+        const claseTienda = escapeHTML(TIENDAS[p.tienda] ? p.tienda : 'otra');
         const nombre = escapeHTML(p.nombre);
         const media = p.imagen
           ? '<img src="' + escapeHTML(p.imagen) + '" alt="' + nombre + '" loading="lazy" onerror="this.remove()">'
