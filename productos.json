@@ -1,0 +1,52 @@
+{
+  "productos": [
+    {
+      "nombre": "Filamento PLA 1.75mm · 1kg",
+      "tienda": "amazon",
+      "enlace": "https://www.amazon.es/dp/REEMPLAZAR?tag=TU-TAG-21",
+      "imagen": "assets/productos/filamento-pla.jpg",
+      "sello": "Recomendado",
+      "descripcion": "El que usamos a diario: fiable y sin atascos."
+    },
+    {
+      "nombre": "Set de boquillas 0.4mm (10 uds)",
+      "tienda": "aliexpress",
+      "enlace": "https://es.aliexpress.com/item/REEMPLAZAR.html",
+      "imagen": "assets/productos/boquillas.jpg",
+      "sello": "Imprescindible",
+      "descripcion": "Repuesto barato que conviene tener siempre a mano."
+    },
+    {
+      "nombre": "Lámina PEI magnética para cama",
+      "tienda": "amazon",
+      "enlace": "https://www.amazon.es/dp/REEMPLAZAR?tag=TU-TAG-21",
+      "imagen": "assets/productos/lamina-pei.jpg",
+      "sello": "Calidad",
+      "descripcion": "Adhesión perfecta y piezas fáciles de soltar."
+    },
+    {
+      "nombre": "Adhesivo en barra para cama",
+      "tienda": "aliexpress",
+      "enlace": "https://es.aliexpress.com/item/REEMPLAZAR.html",
+      "imagen": "assets/productos/adhesivo.jpg",
+      "sello": "Económico",
+      "descripcion": "Truco sencillo para que la primera capa agarre bien."
+    },
+    {
+      "nombre": "Pinzas y espátula de retirada",
+      "tienda": "amazon",
+      "enlace": "https://www.amazon.es/dp/REEMPLAZAR?tag=TU-TAG-21",
+      "imagen": "",
+      "sello": "Útil",
+      "descripcion": "Para limpiar soportes y retirar piezas sin dañarlas."
+    },
+    {
+      "nombre": "Calibre digital 150mm",
+      "tienda": "aliexpress",
+      "enlace": "https://es.aliexpress.com/item/REEMPLAZAR.html",
+      "imagen": "",
+      "sello": "Precisión",
+      "descripcion": "Mide tolerancias al milímetro antes de imprimir."
+    }
+  ]
+}
