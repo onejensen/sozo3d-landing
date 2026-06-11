@@ -1,52 +1,46 @@
 {
   "productos": [
     {
-      "nombre": "Filamento PLA 1.75mm · 1kg",
+      "nombre": "Base FRÍA BIQU CryoGrip Pro Glacier-Original",
       "tienda": "amazon",
-      "enlace": "https://www.amazon.es/dp/REEMPLAZAR?tag=TU-TAG-21",
-      "imagen": "assets/productos/filamento-pla.jpg",
-      "sello": "Recomendado",
-      "descripcion": "El que usamos a diario: fiable y sin atascos."
+      "enlace": "https://www.amazon.es/CryoGrip-Bambu-Lab-Impresoras-Temperature-Removable/dp/B0DJQSTPSQ?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=11LWMHI82RIJK&dib=eyJ2IjoiMSJ9.5i3G7xrqJMqghiPyDDx42w9IKWbxE51U47J7ocV5onz0lsqr7SqPMjBPwlh6jmZpPR5EsKwBLNHCGie49pbRURs3sF74iH77HyHjH6Pf-1EcUk2jq30a_NBSadaw5F6q8_0RX0UW-H0QHT5sfIw1193hHt34_dUuG-NEfdnp7O5hxy036Hg-GSnksnRv1dg1knYk-E0jmjH0xgBu35wDyckzHZA--UbxwBWVhTMhOSI0hqCXxcfJxf53A8RyBm0H20TAznmZRQCFuiBF9hE_43d_RGF0QF_xEGlMhVdBNT4.F9yzJ_cXXgQLvaEb9eQ6_vzMeXLsZdsiAN4eAdWbmPc&dib_tag=se&keywords=biqu&qid=1781193115&sprefix=biq%2Caps%2C157&sr=8-6&th=1&linkCode=ll2&tag=onejensen00-21&linkId=006e068c8354cb41279bd1628b859a2c&ref_=as_li_ss_tl",
+      "imagen": "assets/productos/51SeA7HRNrL._SL1500_.jpg",
+      "sello": "Recomendado"
     },
     {
-      "nombre": "Set de boquillas 0.4mm (10 uds)",
-      "tienda": "aliexpress",
-      "enlace": "https://es.aliexpress.com/item/REEMPLAZAR.html",
-      "imagen": "assets/productos/boquillas.jpg",
-      "sello": "Imprescindible",
-      "descripcion": "Repuesto barato que conviene tener siempre a mano."
-    },
-    {
-      "nombre": "Lámina PEI magnética para cama",
+      "nombre": "Panda Juicer 0,4 mm estándar Flow Hardened Steel Hotend Kit",
       "tienda": "amazon",
-      "enlace": "https://www.amazon.es/dp/REEMPLAZAR?tag=TU-TAG-21",
-      "imagen": "assets/productos/lamina-pei.jpg",
-      "sello": "Calidad",
-      "descripcion": "Adhesión perfecta y piezas fáciles de soltar."
+      "enlace": "https://www.amazon.es/BIQU-compatible-impresoras-Bambu-Lab-calcetines/dp/B0FNDDTZ9Q?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=11LWMHI82RIJK&dib=eyJ2IjoiMSJ9.5i3G7xrqJMqghiPyDDx42w9IKWbxE51U47J7ocV5onz0lsqr7SqPMjBPwlh6jmZpPR5EsKwBLNHCGie49pbRURs3sF74iH77HyHjH6Pf-1EcUk2jq30a_NBSadaw5F6q8_0RX0UW-H0QHT5sfIw1193hHt34_dUuG-NEfdnp7O5hxy036Hg-GSnksnRv1dg1knYk-E0jmjH0xgBu35wDyckzHZA--UbxwBWVhTMhOSI0hqCXxcfJxf53A8RyBm0H20TAznmZRQCFuiBF9hE_43d_RGF0QF_xEGlMhVdBNT4.F9yzJ_cXXgQLvaEb9eQ6_vzMeXLsZdsiAN4eAdWbmPc&dib_tag=se&keywords=biqu&qid=1781193115&sprefix=biq%2Caps%2C157&sr=8-7&th=1&linkCode=ll2&tag=onejensen00-21&linkId=478a25c2c1299e24f217347f850a54c5&ref_=as_li_ss_tl",
+      "imagen": "assets/productos/71DjLjdyuRL._SL1500_.jpg",
+      "sello": "Interesante"
     },
     {
-      "nombre": "Adhesivo en barra para cama",
-      "tienda": "aliexpress",
-      "enlace": "https://es.aliexpress.com/item/REEMPLAZAR.html",
-      "imagen": "assets/productos/adhesivo.jpg",
-      "sello": "Económico",
-      "descripcion": "Truco sencillo para que la primera capa agarre bien."
-    },
-    {
-      "nombre": "Pinzas y espátula de retirada",
+      "nombre": "20 Bolsas al vacío para Filamentos 3D Reutilizables",
       "tienda": "amazon",
-      "enlace": "https://www.amazon.es/dp/REEMPLAZAR?tag=TU-TAG-21",
-      "imagen": "",
-      "sello": "Útil",
-      "descripcion": "Para limpiar soportes y retirar piezas sin dañarlas."
+      "enlace": "https://www.amazon.es/dp/B0GXVJWQ7S?psc=1&pd_rd_i=B0GXVJWQ7S&pd_rd_w=CqhhU&content-id=amzn1.sym.1a1cf43a-d009-48e1-8554-8b895fd31e09&pf_rd_p=1a1cf43a-d009-48e1-8554-8b895fd31e09&pf_rd_r=8VM52X1YXSVRGC0VB5BE&pd_rd_wg=zd86U&pd_rd_r=421639a1-dc82-4ed5-9ab0-8f900e763283&aref=Xq6kkpIWD8&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&linkCode=ll2&tag=onejensen00-21&linkId=13f123971787d9e6f1d6b1ac73ffafdc&ref_=as_li_ss_tl",
+      "imagen": "assets/productos/81mrBFePRpL._AC_SL1500_.jpg",
+      "sello": "Imprescindible"
     },
     {
-      "nombre": "Calibre digital 150mm",
+      "nombre": "Filamentos MARSWORK",
+      "tienda": "amazon",
+      "enlace": "https://www.amazon.es/MarsWork-Filamento-Presecado-Reutilizable-Impresoras/dp/B0FQVFNV5N?dib=eyJ2IjoiMSJ9.8QJawCKvuSweViNy2BGCnP1IEDAPXq2QzbOSPbVP91N8iB7GFJHsa-gfqo-3dTIuU7e5mQsKbHtLou2TwlUZ9OsMK7JwxC7OdnWm1IAzhuVWrqPyST-vqVv3zgMBuyP4qKfZaSDyn8v-iwPfzci3J5-KBUKtx0ACLAEq471nuD_2mWBD4V8YyqAN-0yYVl1L.XC09TzxpoG5Pf23O1_uGfQnrFBHnWU7havD-OWxVDPw&dib_tag=se&keywords=marswork&qid=1781193637&sr=8-2&th=1&linkCode=ll2&tag=onejensen00-21&linkId=12409eca0be989690736213fbeba3280&ref_=as_li_ss_tl",
+      "imagen": "assets/productos/81ciz-5pzlL._AC_SL1500_.jpg",
+      "sello": "Calidad"
+    },
+    {
+      "nombre": "Base FRÍA BIQU CryoGrip Pro Glacier",
       "tienda": "aliexpress",
-      "enlace": "https://es.aliexpress.com/item/REEMPLAZAR.html",
-      "imagen": "https://ae01.alicdn.com/kf/REEMPLAZAR.jpg",
-      "sello": "Precisión",
-      "descripcion": "Mide tolerancias al milímetro antes de imprimir."
+      "enlace": "https://s.click.aliexpress.com/e/_c4KtIJU1",
+      "imagen": "assets/productos/Sd0bf2be91d0845b88e070243b8b7e92bd.jpg",
+      "sello": "Recomendado"
+    },
+    {
+      "nombre": "JAYO 10 rollos pla plus/PETG",
+      "tienda": "aliexpress",
+      "enlace": "https://s.click.aliexpress.com/e/_c2JdpAkl",
+      "imagen": "assets/productos/Sb3806b68539d4539a2bd72d24fff015eB.jpg",
+      "sello": "Precisión"
     }
   ]
 }
