@@ -1,0 +1,396 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-09T00:00:00Z",
+  "title": "Design System: Sozo3D",
+  "extensions": {
+    "colorMeta": {
+      "orange": {
+        "role": "primary",
+        "displayName": "Brand Orange",
+        "canonical": "#E87722",
+        "note": "Pinned by the owner. The source world's magenta #FF00A6 and safety orange #FF5A00 were both collapsed into this single accent; no second hot colour may enter.",
+        "tonalRamp": [
+          "#2B1305",
+          "#4A2109",
+          "#6C310D",
+          "#8F4212",
+          "#B45718",
+          "#E87722",
+          "#F09B5C",
+          "#F7C69E"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Absolute Black",
+        "canonical": "#000000",
+        "tonalRamp": [
+          "#000000",
+          "#080808",
+          "#171717",
+          "#2E2E2E",
+          "#43464C",
+          "#8C8C8C",
+          "#C4C4C4",
+          "#FFFFFF"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Second Black",
+        "canonical": "#171717",
+        "note": "The incumbent site's own dark. Panel surface for cells and the CTA band; the only lift the system has.",
+        "tonalRamp": [
+          "#050505",
+          "#0D0D0D",
+          "#171717",
+          "#242424",
+          "#3A3A3A",
+          "#5C5C5C",
+          "#8C8C8C",
+          "#C4C4C4"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Reserve Black",
+        "canonical": "#080808",
+        "note": "Declared in :root as part of the pinned inherited palette; applied nowhere in this build. Recorded to keep the palette closed, not as a surface token.",
+        "tonalRamp": [
+          "#000000",
+          "#080808",
+          "#141414",
+          "#242424",
+          "#3A3A3A",
+          "#5C5C5C",
+          "#8C8C8C",
+          "#C4C4C4"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule Grey",
+        "canonical": "#2E2E2E",
+        "note": "Line colour only: every hairline, grid gutter, chip outline and scrollbar thumb. Never a content fill.",
+        "tonalRamp": [
+          "#0A0A0A",
+          "#141414",
+          "#1F1F1F",
+          "#2E2E2E",
+          "#434343",
+          "#6B6B6B",
+          "#9A9A9A",
+          "#CFCFCF"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Grey",
+        "canonical": "#8C8C8C",
+        "note": "Secondary prose. Raised from the incumbent site's grey specifically to clear 4.5:1 on black.",
+        "tonalRamp": [
+          "#161616",
+          "#2B2B2B",
+          "#414141",
+          "#5C5C5C",
+          "#767676",
+          "#8C8C8C",
+          "#B4B4B4",
+          "#DEDEDE"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Mark White",
+        "canonical": "#FFFFFF",
+        "tonalRamp": [
+          "#171717",
+          "#2E2E2E",
+          "#4D4D4D",
+          "#707070",
+          "#9A9A9A",
+          "#C4C4C4",
+          "#E6E6E6",
+          "#FFFFFF"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "The Shouting Word",
+        "purpose": "The single condensed word in the first viewport. Scales with the viewport, never below its 5.2rem floor."
+      },
+      "display-2": {
+        "displayName": "Display Second Line",
+        "purpose": "The orange line beneath the shout. A distinct display step between the shouting word and the section headings."
+      },
+      "headline": {
+        "displayName": "Section Heading",
+        "purpose": "Band headings and the CTA band title, uppercase white with one orange emphasis phrase. The CTA title shares this step rather than carrying its own."
+      },
+      "title": {
+        "displayName": "Cell Name",
+        "purpose": "The name inside a service or reason cell."
+      },
+      "mark-code": {
+        "displayName": "Mark Code",
+        "purpose": "The opening code mark of every record (SZ/01, MT/01). Sits deliberately below the cell-heading step: snapped onto it, the mark competes with the name it introduces."
+      },
+      "body": {
+        "displayName": "Prose",
+        "purpose": "Archivo, sentence case, 46-54ch. The only voice permitted to speak in sentences."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "The small-text step and the most-used size in the file: cell descriptions, channel values, the affiliate disclosure and product names. One step, not a family of near-identical values."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Mono keys, controls and nav links. Uppercase."
+      },
+      "code": {
+        "displayName": "Marking Code",
+        "purpose": "REF/SZ/MT codes, class words, LOTE, TIPO, AREA, rail type. Tabular numerals. Never prose."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "stamp-ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "The single orchestrated entrance. Marks translate 8px up and fade over 500ms."
+      },
+      {
+        "name": "stamp-delay-1",
+        "value": "40ms",
+        "purpose": "First mark layer of the entrance stamp."
+      },
+      {
+        "name": "stamp-delay-2",
+        "value": "120ms",
+        "purpose": "Second mark layer."
+      },
+      {
+        "name": "stamp-delay-3",
+        "value": "200ms",
+        "purpose": "Third mark layer."
+      },
+      {
+        "name": "ink-land",
+        "value": "420ms cubic-bezier(.16,1,.3,1) 260ms",
+        "purpose": "The shouting word lands last, opacity only, no displacement — flat like ink."
+      },
+      {
+        "name": "state-linear",
+        "value": "120ms linear",
+        "purpose": "Every hover/focus state change. No easing curve on state in this system."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce renders the stamped state immediately, no animation, scroll-behavior auto",
+        "purpose": "Real branch, not a disabled transition."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "cells-4-two-up",
+        "value": "620px"
+      },
+      {
+        "name": "jacks-two-up",
+        "value": "640px"
+      },
+      {
+        "name": "density-strip-hazard",
+        "value": "700px"
+      },
+      {
+        "name": "cells-3",
+        "value": "760px"
+      },
+      {
+        "name": "parts-three-up",
+        "value": "780px"
+      },
+      {
+        "name": "density-registration-bay",
+        "value": "860px"
+      },
+      {
+        "name": "density-nav",
+        "value": "900px"
+      },
+      {
+        "name": "cells-4",
+        "value": "1000px"
+      },
+      {
+        "name": "jacks-five-up",
+        "value": "1040px"
+      },
+      {
+        "name": "parts-four-up",
+        "value": "1060px"
+      },
+      {
+        "name": "density-rails",
+        "value": "1080px"
+      }
+    ],
+    "implementationConstraints": [
+      {
+        "name": "The Replaced-Element Trap",
+        "body": "An inline <svg> is a replaced element: position:absolute with left/right (or inset:0) does NOT stretch it. Every full-bleed SVG field in this build carries an explicit width/height, or a measured width: calc(100% - (var(--pad) * 2)). This bit the build three times — grain, tone fields and band scales."
+      },
+      {
+        "name": "Deterministic Barcodes",
+        "body": "Cell barcodes are generated at runtime from the cell's own data-code string: bar width = 1 + (charCode % 3), gap = 1 + ((charCode >> 2) % 2). Deterministic, non-repeating, and never decorative filler."
+      },
+      {
+        "name": "The Ten-Step Ramp",
+        "body": "The shipped file uses exactly ten font sizes: clamp(5.2rem,25vw,20rem) shout; clamp(2.1rem,8.4vw,6.6rem) hero second line; clamp(2.1rem,6vw,4.2rem) section headings and CTA title; 22px brand lockup (strip and footer); clamp(1.35rem,2.4vw,1.85rem) cell headings; clamp(15px,1.5vw,19px) cell mark code; 16px prose; 14px small text; 11px labels and controls; 10.5px codes and marks. A new size is a ramp change, not a local adjustment."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Control",
+      "kind": "button",
+      "refersTo": "control-fill",
+      "description": "The email action. Filled orange, corner brackets worn at rest, inverts to white on hover.",
+      "html": "<a class=\"ds-ctrl ds-ctrl--fill\" href=\"mailto:info@sozo3d.es\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M2 5h20v14H2z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\"/><path d=\"m2.6 6 9.4 6.2L21.4 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\"/></svg>Pedir presupuesto</a>",
+      "css": ".ds-ctrl { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 13px 22px; border: 1px solid #E87722; background: transparent; color: #E87722; font-family: 'Martian Mono', ui-monospace, monospace; font-size: 11px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; border-radius: 0; cursor: pointer; transition: background .12s linear, color .12s linear; } .ds-ctrl svg { width: 15px; height: 15px; flex-shrink: 0; } .ds-ctrl::before, .ds-ctrl::after { content: ''; position: absolute; width: 7px; height: 7px; border: 2px solid currentColor; opacity: 0; transition: opacity .12s linear; } .ds-ctrl::before { top: -4px; left: -4px; border-right: 0; border-bottom: 0; } .ds-ctrl::after { bottom: -4px; right: -4px; border-left: 0; border-top: 0; } .ds-ctrl--fill { background: #E87722; color: #000; } .ds-ctrl--fill::before, .ds-ctrl--fill::after { opacity: 1; border-color: #E87722; } .ds-ctrl--fill:hover { background: #FFF; border-color: #FFF; color: #000; } .ds-ctrl--fill:hover::before, .ds-ctrl--fill:hover::after { border-color: #FFF; } .ds-ctrl:focus-visible { outline: 2px solid #E87722; outline-offset: 2px; }"
+    },
+    {
+      "name": "Outlined Control",
+      "kind": "button",
+      "refersTo": "control-outline",
+      "description": "Secondary action carrying the address itself. Brackets appear on hover and focus.",
+      "html": "<a class=\"ds-ctrl-o\" href=\"mailto:info@sozo3d.es\">info@sozo3d.es</a>",
+      "css": ".ds-ctrl-o { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 13px 22px; border: 1px solid #E87722; background: transparent; color: #E87722; font-family: 'Martian Mono', ui-monospace, monospace; font-size: 11px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; border-radius: 0; cursor: pointer; transition: background .12s linear, color .12s linear; } .ds-ctrl-o::before, .ds-ctrl-o::after { content: ''; position: absolute; width: 7px; height: 7px; border: 2px solid currentColor; opacity: 0; transition: opacity .12s linear; } .ds-ctrl-o::before { top: -4px; left: -4px; border-right: 0; border-bottom: 0; } .ds-ctrl-o::after { bottom: -4px; right: -4px; border-left: 0; border-top: 0; } .ds-ctrl-o:hover { background: #E87722; color: #000; } .ds-ctrl-o:hover::before, .ds-ctrl-o:hover::after, .ds-ctrl-o:focus-visible::before, .ds-ctrl-o:focus-visible::after { opacity: 1; } .ds-ctrl-o:focus-visible { outline: 2px solid #E87722; outline-offset: 2px; }"
+    },
+    {
+      "name": "Cell",
+      "kind": "card",
+      "refersTo": "cell",
+      "description": "A filing record: mono mark code, class word, display-face name, small-step description, and a footer of generated marks. As a link it takes a 1px orange outline inset by -1px.",
+      "html": "<a class=\"ds-cell\" href=\"mailto:info@sozo3d.es\"><div class=\"ds-cell__top\"><span class=\"ds-cell__code\">SZ/01</span><span class=\"ds-code ds-cell__ref\">SERVICIO</span></div><span class=\"ds-cell__n\">Prototipos</span><span class=\"ds-cell__d\">Para empresas, startups y makers</span><div class=\"ds-cell__foot\"><svg class=\"ds-cell__bar\" viewBox=\"0 0 42 20\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><g fill=\"currentColor\"><rect x=\"0\" width=\"3\" height=\"20\"/><rect x=\"5\" width=\"1\" height=\"20\"/><rect x=\"8\" width=\"2\" height=\"20\"/><rect x=\"12\" width=\"3\" height=\"20\"/><rect x=\"17\" width=\"1\" height=\"20\"/><rect x=\"20\" width=\"2\" height=\"20\"/><rect x=\"25\" width=\"3\" height=\"20\"/><rect x=\"30\" width=\"1\" height=\"20\"/><rect x=\"33\" width=\"2\" height=\"20\"/><rect x=\"38\" width=\"3\" height=\"20\"/></g></svg><span class=\"ds-code\">CLASE 01</span></div></a>",
+      "css": ".ds-cell { position: relative; background: #171717; padding: 22px 20px 24px; border: 1px solid #2E2E2E; border-radius: 0; display: flex; flex-direction: column; gap: 10px; color: #FFF; font-family: 'Archivo', system-ui, sans-serif; transition: background .12s linear; } .ds-cell__top { display: flex; align-items: baseline; gap: 10px; padding-bottom: 12px; border-bottom: 1px solid #2E2E2E; } .ds-cell__code { font-family: 'Martian Mono', ui-monospace, monospace; font-size: clamp(15px, 1.5vw, 19px); font-weight: 700; letter-spacing: -.01em; color: #E87722; font-variant-numeric: tabular-nums; } .ds-code { font-family: 'Martian Mono', ui-monospace, monospace; font-size: 10.5px; letter-spacing: .02em; text-transform: uppercase; color: #8C8C8C; } .ds-cell__ref { margin-left: auto; } .ds-cell__n { font-family: 'Big Shoulders Display', 'Arial Narrow', sans-serif; font-size: clamp(1.35rem, 2.4vw, 1.85rem); font-weight: 800; line-height: 1; letter-spacing: .01em; text-transform: uppercase; color: #FFF; } .ds-cell__d { font-size: 14px; color: #8C8C8C; } .ds-cell__foot { display: flex; align-items: center; gap: 10px; margin-top: auto; padding-top: 12px; border-top: 1px solid #2E2E2E; } .ds-cell__bar { width: 54px; height: 13px; display: block; color: #8C8C8C; } a.ds-cell { text-decoration: none; outline: 1px solid transparent; outline-offset: -1px; transition: outline-color .12s linear, background .12s linear; } a.ds-cell:hover, a.ds-cell:focus-visible { outline-color: #E87722; } a.ds-cell:hover .ds-cell__n { color: #E87722; }"
+    },
+    {
+      "name": "Code Strip",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "The sticky top strip: roundel, wordmark, REF code, hazard block, section links, email control.",
+      "html": "<header class=\"ds-strip\"><span class=\"ds-strip__in\"><svg class=\"ds-roundel\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M12 2v20M2 12h20M4.9 4.9l14.2 14.2M19.1 4.9 4.9 19.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/></svg><span class=\"ds-strip__id\">SOZO<b>3D</b></span><span class=\"ds-strip__code\">//REF SZ3D-01</span><nav class=\"ds-strip__nav\"><a href=\"#servicios\">Servicios</a><a href=\"#contacto\">Contacto</a></nav></span></header>",
+      "css": ".ds-strip { background: #000; border-bottom: 1px solid #2E2E2E; } .ds-strip__in { display: flex; align-items: center; gap: 14px; min-height: 54px; padding: 8px 22px; } .ds-roundel { width: 26px; height: 26px; color: #E87722; flex-shrink: 0; } .ds-strip__id { font-family: 'Big Shoulders Display', 'Arial Narrow', sans-serif; font-size: 22px; font-weight: 800; color: #FFF; line-height: 1; } .ds-strip__id b { color: #E87722; } .ds-strip__code { font-family: 'Martian Mono', ui-monospace, monospace; font-size: 10.5px; letter-spacing: .02em; text-transform: uppercase; color: #8C8C8C; } .ds-strip__nav { display: flex; gap: 20px; margin-left: auto; } .ds-strip__nav a { font-family: 'Martian Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: #8C8C8C; text-decoration: none; padding-block: 5px; border-bottom: 2px solid transparent; transition: color .12s linear, border-color .12s linear; } .ds-strip__nav a:hover { color: #FFF; border-bottom-color: #E87722; } .ds-strip__nav a:focus-visible { outline: 2px solid #E87722; outline-offset: 2px; }"
+    },
+    {
+      "name": "Marking Chip",
+      "kind": "chip",
+      "refersTo": null,
+      "description": "A bordered mono code chip. Carries marking data only — REF strings, class words, LOTE/TIPO/AREA — never a claim.",
+      "html": "<span class=\"ds-chip\">REF SZ3D-01</span><span class=\"ds-chip\">TIPO: SERVICIO</span>",
+      "css": ".ds-chip { display: inline-block; font-family: 'Martian Mono', ui-monospace, monospace; font-size: 10.5px; letter-spacing: .02em; text-transform: uppercase; color: #8C8C8C; border: 1px solid #2E2E2E; border-radius: 0; padding: 4px 9px; margin-right: 9px; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Affiliate Card",
+      "kind": "card",
+      "refersTo": "part-card",
+      "description": "The supporting shelf. Black ground, white 4:3 media plate, mono source tag, orange action line. Deliberately lighter than a service cell.",
+      "html": "<a class=\"ds-part\" href=\"#\"><span class=\"ds-part__media\"><img src=\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='30'><rect width='40' height='30' fill='%23e6e6e6'/></svg>\" alt=\"\"><span class=\"ds-part__src\">AMAZON</span></span><span class=\"ds-part__body\"><span class=\"ds-part__lbl\">CN/01</span><span class=\"ds-part__name\">Filamento PLA 1.75mm</span><span class=\"ds-part__go\">Ver en Amazon<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 12h17M14 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\"/></svg></span></span></a>",
+      "css": ".ds-part { background: #000; border: 1px solid #2E2E2E; border-radius: 0; display: flex; flex-direction: column; text-decoration: none; font-family: 'Archivo', system-ui, sans-serif; transition: background .12s linear; max-width: 260px; } .ds-part:hover { background: #171717; } .ds-part__media { position: relative; aspect-ratio: 4 / 3; background: #FFF; overflow: hidden; display: block; } .ds-part__media img { width: 100%; height: 100%; object-fit: contain; padding: 10px; display: block; } .ds-part__src { position: absolute; top: 0; left: 0; font-family: 'Martian Mono', ui-monospace, monospace; font-size: 10.5px; letter-spacing: .04em; padding: 4px 8px; background: #000; color: #E87722; text-transform: uppercase; } .ds-part__body { padding: 13px 14px 16px; display: flex; flex-direction: column; gap: 8px; } .ds-part__lbl { font-family: 'Martian Mono', ui-monospace, monospace; font-size: 11px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; color: #E87722; } .ds-part__name { font-size: 14px; line-height: 1.35; color: #FFF; font-weight: 500; } .ds-part__go { padding-top: 8px; font-family: 'Martian Mono', ui-monospace, monospace; font-size: 10.5px; letter-spacing: .05em; text-transform: uppercase; color: #E87722; display: flex; align-items: center; gap: 7px; } .ds-part__go svg { width: 12px; height: 12px; } .ds-part:focus-visible { outline: 2px solid #E87722; outline-offset: 2px; }"
+    },
+    {
+      "name": "CTA Band",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The panel-black call band: orange hairline border, halftone screen behind the content, registration crosses on two corners.",
+      "html": "<div class=\"ds-call\"><svg class=\"ds-call__tone\" preserveAspectRatio=\"none\" width=\"100%\" height=\"100%\" aria-hidden=\"true\"><defs><pattern id=\"dsTone\" width=\"5\" height=\"5\" patternUnits=\"userSpaceOnUse\"><circle cx=\"1.2\" cy=\"1.2\" r=\"1.05\" fill=\"#E87722\" opacity=\".30\"/></pattern></defs><rect width=\"100%\" height=\"100%\" fill=\"url(%23dsTone)\"/></svg><svg class=\"ds-call__x ds-call__x--tl\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 2v20M2 12h20\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg><svg class=\"ds-call__x ds-call__x--br\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 2v20M2 12h20\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg><span class=\"ds-call__body\"><span class=\"ds-call__t\">¿Listo para <em>imprimir?</em></span><span class=\"ds-call__s\">Escríbenos y te damos presupuesto sin compromiso</span></span></div>",
+      "css": ".ds-call { position: relative; background: #171717; border: 1px solid #E87722; border-radius: 0; padding: clamp(24px, 4vw, 44px) 22px; display: flex; flex-wrap: wrap; align-items: center; gap: clamp(18px, 3vw, 40px); font-family: 'Archivo', system-ui, sans-serif; } .ds-call__tone { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; } .ds-call__x { position: absolute; width: 13px; height: 13px; color: #E87722; z-index: 2; } .ds-call__x--tl { top: -7px; left: -7px; } .ds-call__x--br { bottom: -7px; right: -7px; } .ds-call__body { position: relative; z-index: 1; flex: 1 1 min(100%, 32ch); } .ds-call__t { display: block; font-family: 'Big Shoulders Display', 'Arial Narrow', sans-serif; font-size: clamp(2.1rem, 6vw, 4.2rem); font-weight: 800; line-height: .9; letter-spacing: .005em; text-transform: uppercase; color: #FFF; } .ds-call__t em { font-style: normal; color: #E87722; } .ds-call__s { display: block; margin-top: 12px; color: #8C8C8C; font-size: 16px; max-width: 46ch; }"
+    },
+    {
+      "name": "Hazard Block",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The system's recurring ornament: a -45deg orange stripe pattern filling a measured rectangle. White variant marks an unassigned slot.",
+      "html": "<svg class=\"ds-haz\" width=\"120\" height=\"13\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><defs><pattern id=\"dsHaz\" width=\"12\" height=\"12\" patternUnits=\"userSpaceOnUse\" patternTransform=\"rotate(-45)\"><rect width=\"6\" height=\"12\" fill=\"#E87722\"/></pattern></defs><rect width=\"100%\" height=\"100%\" fill=\"url(%23dsHaz)\"/></svg>",
+      "css": ".ds-haz { display: block; flex-shrink: 0; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Printed Sleeve",
+    "overview": "The page is a piece of flat industrial print: a product sleeve for a printing service, where density itself is the material. Every surface behaves like ink on stock — hairline rules that run to the page edges, cells that butt against their neighbours with a 1px gutter, marks stamped into the margins, and one enormous condensed word shouting through the middle of it. Nothing here imitates a screen appliance. There are no gradients anywhere in the build, no glow, no shadow, no rounded corner, and no illuminated surface; depth is made only by tone and by rule.\n\nThe palette is closed and inherited: the site's own black, its own #171717, its own brand orange, white, and one grey. The build's source world carried a magenta and a safety orange; both were collapsed into the single pinned brand orange before a line was written, so the page has exactly one hot colour and it never competes with itself. Ornament is a system rather than decoration: hazard stripes, halftone screens, ruler scales, registration crosses, roundels and barcodes are all drawn SVG in one consistent weight, and every barcode on a cell is generated deterministically from that cell's own ID string, so no two marks repeat and none of them is arbitrary.\n\nThe world it explicitly refuses is the one it replaced: the dark hero with an orange gradient wash and a grid of soft icon cards. That arrangement is not a style option here; it is the anti-reference. The offer and the action must survive the density — the email control is present in the sticky strip, in the first viewport, and in the CTA band, and it never gets buried by ornament.",
+    "keyCharacteristics": [
+      "Absolute black ground, never flat: a low-density orange halftone grain runs fixed behind the whole sheet.",
+      "Exactly one accent colour, #E87722, on marks, codes, controls and second lines.",
+      "Zero radius, zero gradient, zero glow, zero shadow. 1px hairlines build the entire frame.",
+      "Three type roles with hard boundaries: condensed display shouts, Archivo speaks, mono measures.",
+      "All ornament is drawn SVG at one weight; hazard, tone and scale are <pattern> fills.",
+      "Ornament drops in declared density tiers as the viewport narrows; the display word never drops below its floor."
+    ],
+    "rules": [
+      {
+        "name": "The Closed Palette Rule",
+        "body": "These are the only colours in this system. The palette is the incumbent site's own tokens, pinned by the owner; no second hot colour, no secondary accent, and no new hue may enter a future surface. If a new state needs distinguishing, distinguish it with tone, rule weight, or mark — not with a colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Ink Rule",
+        "body": "Orange is the marking ink. It prints codes, rules, patterns and controls. It never fills a large field, never sits behind body prose, and never appears as a gradient, tint ramp or glow.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mono-Is-Measurement Rule",
+        "body": "Martian Mono is reserved for codes, labels, values and identifiers. It never sets a sentence. A mono paragraph is the system wearing a costume; prose belongs to Archivo, in sentence case, even though every mark around it is uppercase.",
+        "section": "typography"
+      },
+      {
+        "name": "The Ten-Step Rule",
+        "body": "The ramp is closed at ten steps. Before adding a size, check whether an existing step already does the job — three near-identical small values are one step, not three. A step earns its place by having a role no other step can hold: the hero second line, the cell mark code and the small-text step each do.",
+        "section": "typography"
+      },
+      {
+        "name": "The Floor Rule",
+        "body": "The shouting word scales with the viewport but never falls below its floor (5.2rem). Density layers are removed to make room for it; it is never shrunk to make room for them.",
+        "section": "typography"
+      },
+      {
+        "name": "The Marks-Not-Claims Rule",
+        "body": "Marking strings (REF/SZ/MT codes, class words, LOTE, TIPO, ÁREA) may be authored freely — they are the system's ornament and carry no assertion. Page copy may not. No claim about prices, lead times, tolerances, materials, clients or volumes may be introduced as type, and no photograph of a printed part exists to support one.",
+        "section": "typography"
+      },
+      {
+        "name": "The No-Light Rule",
+        "body": "Nothing on this page emits. No shadow, no glow, no gradient, no glass. If an element needs to separate from its neighbour, give it a rule or a different black.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Tone-Not-Void Rule",
+        "body": "Every large black region carries grain or halftone. If a gutter or band measures as pure #000000 across its whole area, it is unfinished.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do ground every surface in absolute black (#000000) with the fixed halftone grain behind it, and use the second black (#171717) for panels only.",
+      "Do give every new section a REF code in its heading, a ruler scale at its top edge, and at least one drawn mark.",
+      "Do draw all ornament as inline SVG at the established weight (1.5-1.7px stroke; patterns for hazard, tone and scale).",
+      "Do give every full-bleed SVG field an explicit width/height (or a measured width: calc(...)). An inline <svg> is a replaced element: position: absolute with left/right or inset: 0 will not stretch it. This bit the build three times.",
+      "Do keep prose in Archivo on the 16px body step or the 14px small step, sentence case, capped at 46-78ch, in white or the muted grey (#8C8C8C, chosen to clear 4.5:1 on black).",
+      "Do remove ornament layers in the declared density steps (rails at 1080px, registration bay at 860px, nav at 900px, strip hazard at 700px) rather than compressing them.",
+      "Do keep the email action reachable at every breakpoint and every density tier.",
+      "Do ship one orchestrated entrance stamp — marks first (40/120/200ms delays), the word landing last as a flat opacity fade — with a real prefers-reduced-motion branch that renders the stamped state with no animation."
+    ],
+    "donts": [
+      "Don't introduce a second accent colour, a tint ramp, or any hue outside the closed palette.",
+      "Don't use a gradient, a glow, a shadow, a blur or a translucent surface anywhere. Depth is tone and rule.",
+      "Don't round a corner. Radius is 0 across the system.",
+      "Don't add a font size outside the ten-step ramp, and don't set prose in Martian Mono, and don't set body copy in caps — the mono is for codes, labels and values only.",
+      "Don't let a large black region sit flat: grain or halftone belongs behind every band and gutter.",
+      "Don't add a claim as copy. Marks may be authored; claims may not. No price, lead time, tolerance, material, client or volume may be written, and no image may imply a printed part the project does not have.",
+      "Don't float cells apart with gaps and shadows — grids butt-join over a 1px rule-grey gutter.",
+      "Don't return to the replaced world: a dark hero with an orange gradient wash and a grid of soft icon cards is the anti-reference, not a fallback.",
+      "Don't let the affiliate shelf outweigh the service grid in surface, size or colour."
+    ]
+  }
+}
