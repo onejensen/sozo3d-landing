@@ -559,6 +559,118 @@
     /* Clash lleva el espacio entre palabras más corto que la condensada que
        había antes: sin esto los titulares de dos palabras se leen pegados. */
     .shout__line2, .block__h, .cell__n, .call__t { word-spacing: .07em; }
+
+    /* ══ Galería: la ficha se abre y enseña las piezas ══
+       Misma gramática que el resto: negro absoluto, filete de un píxel,
+       códigos en mono y el naranja solo donde marca la posición. */
+    .cell--gal {
+      text-align: left; width: 100%; cursor: pointer;
+      font: inherit; color: inherit;
+    }
+    .cell__ex {
+      display: inline-flex; align-items: center; gap: 5px;
+      margin-left: 8px; color: var(--muted);
+      font-family: var(--mono); font-size: 10.5px; letter-spacing: .04em;
+      transition: color .12s linear;
+    }
+    .cell__ex svg { width: 13px; height: 13px; color: var(--orange); }
+    .cell__ex b { font-weight: 400; font-variant-numeric: tabular-nums; }
+    .cell--gal:hover .cell__ex, .cell--gal:focus-visible .cell__ex { color: var(--orange); }
+
+    /* El visor. Ocupa la ventana entera y deja el fondo a oscuras. */
+    .lb {
+      width: 100%; max-width: none; height: 100%; max-height: none;
+      margin: 0; padding: 0; border: 0;
+      background: transparent; color: var(--white); overflow: hidden;
+    }
+    .lb::backdrop { background: rgba(0, 0, 0, .93); }
+    .lb__box {
+      position: relative;
+      width: min(1120px, 100%); height: 100%; margin: 0 auto;
+      display: grid; grid-template-rows: auto minmax(0, 1fr) auto;
+      background: var(--ink); border-inline: var(--hair) solid var(--rule);
+    }
+    .lb__top {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px var(--pad);
+      border-bottom: var(--hair) solid var(--rule);
+    }
+    .lb__code {
+      font-family: var(--mono); font-size: 15px; font-weight: 700;
+      letter-spacing: -.01em; color: var(--orange); font-variant-numeric: tabular-nums;
+    }
+    .lb__t {
+      font-family: var(--display); font-weight: 700; font-size: 17px;
+      text-transform: uppercase; letter-spacing: -.005em; word-spacing: .07em;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .lb__num {
+      margin-left: auto; flex-shrink: 0;
+      font-family: var(--mono); font-size: 11px; letter-spacing: .06em;
+      color: var(--muted); font-variant-numeric: tabular-nums;
+    }
+    .lb__x {
+      flex-shrink: 0; width: 34px; height: 34px; cursor: pointer;
+      display: grid; place-items: center;
+      border: var(--hair) solid var(--rule); color: var(--muted);
+      transition: color .12s linear, border-color .12s linear;
+    }
+    .lb__x svg { width: 15px; height: 15px; }
+    .lb__x:hover, .lb__x:focus-visible { color: var(--orange); border-color: var(--orange); }
+
+    /* El escenario: la foto manda, el resto se aparta. */
+    .lb__stage {
+      position: relative; min-height: 0;
+      display: flex; align-items: center; justify-content: center;
+      padding: 14px var(--pad);
+    }
+    .lb__stage .tone { position: absolute; inset: 0; opacity: .5; pointer-events: none; }
+    .lb__img {
+      position: relative;
+      max-width: 100%; max-height: 100%;
+      width: auto; height: auto; object-fit: contain;
+      border: var(--hair) solid var(--rule);
+      opacity: 0; transition: opacity .18s linear;
+    }
+    .lb__img.is-on { opacity: 1; }
+    @media (prefers-reduced-motion: reduce) { .lb__img { transition: none; } }
+
+    .lb__nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 42px; height: 60px; cursor: pointer; z-index: 2;
+      display: grid; place-items: center;
+      background: var(--ink-2); border: var(--hair) solid var(--rule);
+      color: var(--white);
+      transition: background .12s linear, color .12s linear, border-color .12s linear;
+    }
+    .lb__nav svg { width: 18px; height: 18px; }
+    .lb__nav:hover, .lb__nav:focus-visible { background: var(--orange); color: var(--ink); border-color: var(--orange); }
+    .lb__nav--prev { left: 6px; }
+    .lb__nav--prev svg { transform: scaleX(-1); }
+    .lb__nav--next { right: 6px; }
+    .lb[data-one] .lb__nav, .lb[data-one] .lb__strip { display: none; }
+
+    /* La tira de contactos: dónde estás dentro del carrete. */
+    .lb__strip {
+      display: flex; gap: 6px; padding: 10px var(--pad);
+      justify-content: safe center;
+      overflow-x: auto; border-top: var(--hair) solid var(--rule);
+      scrollbar-width: thin;
+    }
+    .lb__th {
+      flex: 0 0 auto; width: 52px; height: 52px; padding: 0; cursor: pointer;
+      border: var(--hair) solid var(--rule); opacity: .45;
+      transition: opacity .12s linear, border-color .12s linear;
+    }
+    .lb__th img { width: 100%; height: 100%; object-fit: cover; }
+    .lb__th:hover, .lb__th:focus-visible { opacity: .85; }
+    .lb__th[aria-current="true"] { opacity: 1; border-color: var(--orange); }
+    html.lb-on { overflow: hidden; }
+    @media (max-width: 620px) {
+      .lb__t { font-size: 15px; }
+      .lb__nav { width: 34px; height: 52px; }
+      .lb__th { width: 42px; height: 42px; }
+    }
   </style>
 </head>
 
@@ -644,6 +756,12 @@
     </symbol>
     <symbol id="m-tree" viewBox="0 0 24 24">
       <path d="M12 22V7M12 7 6.5 2.8M12 7l5.5-4.2M4 12.5h16M6.5 19 12 14l5.5 5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+    </symbol>
+    <symbol id="m-expand" viewBox="0 0 24 24">
+      <path d="M3 9V3h6M21 9V3h-6M3 15v6h6M21 15v6h-6" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="m-close" viewBox="0 0 24 24">
+      <path d="M5 5 19 19M19 5 5 19" fill="none" stroke="currentColor" stroke-width="1.8"/>
     </symbol>
     <symbol id="m-cube" viewBox="0 0 24 24">
       <path d="M12 2 3 7v10l9 5 9-5V7zM3 7l9 5 9-5M12 12v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
@@ -751,33 +869,36 @@
           <span class="code code--dim block__ref">REF SZ3D-02 · 04 CLASES</span>
         </div>
         <div class="cells cells--4">
-          <div class="cell">
+          <button class="cell cell--gal" type="button" data-gal="SZ/01">
             <div class="cell__top">
               <span class="cell__code">SZ/01</span>
               <span class="code code--dim cell__ref">SERVICIO</span>
+              <span class="cell__ex"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#m-expand"></use></svg><b data-gal-n></b></span>
             </div>
             <span class="cell__n">Prototipos</span>
             <span class="cell__d">Para empresas, startups y makers</span>
             <div class="cell__foot"><svg class="barcode cell__bar" data-code="CLASE 01" aria-hidden="true" preserveAspectRatio="none"></svg><span class="code code--dim">CLASE 01</span><svg class="hazard" style="width:38px;height:9px;margin-left:auto" aria-hidden="true" preserveAspectRatio="none"><rect width="100%" height="100%" fill="url(#p-haz)"/></svg></div>
-          </div>
-          <div class="cell">
+          </button>
+          <button class="cell cell--gal" type="button" data-gal="SZ/02">
             <div class="cell__top">
               <span class="cell__code">SZ/02</span>
               <span class="code code--dim cell__ref">SERVICIO</span>
+              <span class="cell__ex"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#m-expand"></use></svg><b data-gal-n></b></span>
             </div>
             <span class="cell__n">Piezas decorativas</span>
             <span class="cell__d">Para el hogar y regalos únicos</span>
             <div class="cell__foot"><svg class="barcode cell__bar" data-code="CLASE 02" aria-hidden="true" preserveAspectRatio="none"></svg><span class="code code--dim">CLASE 02</span><svg class="hazard" style="width:38px;height:9px;margin-left:auto" aria-hidden="true" preserveAspectRatio="none"><rect width="100%" height="100%" fill="url(#p-haz)"/></svg></div>
-          </div>
-          <div class="cell">
+          </button>
+          <button class="cell cell--gal" type="button" data-gal="SZ/03">
             <div class="cell__top">
               <span class="cell__code">SZ/03</span>
               <span class="code code--dim cell__ref">SERVICIO</span>
+              <span class="cell__ex"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#m-expand"></use></svg><b data-gal-n></b></span>
             </div>
             <span class="cell__n">Piezas de repuesto</span>
             <span class="cell__d">Fabricadas a tu medida exacta</span>
             <div class="cell__foot"><svg class="barcode cell__bar" data-code="CLASE 03" aria-hidden="true" preserveAspectRatio="none"></svg><span class="code code--dim">CLASE 03</span><svg class="hazard" style="width:38px;height:9px;margin-left:auto" aria-hidden="true" preserveAspectRatio="none"><rect width="100%" height="100%" fill="url(#p-haz)"/></svg></div>
-          </div>
+          </button>
           <a class="cell" href="mailto:info@sozo3d.es">
             <div class="cell__top">
               <span class="cell__code">SZ/04</span>
@@ -910,6 +1031,30 @@
     </footer>
   </div>
 
+  <dialog class="lb" id="lb" aria-label="Galería de piezas impresas">
+    <div class="lb__box">
+      <div class="lb__top">
+        <span class="lb__code" id="lb-code">SZ/01</span>
+        <span class="lb__t" id="lb-title">Prototipos</span>
+        <span class="lb__num" id="lb-num" aria-live="polite">01/01</span>
+        <button class="lb__x" type="button" id="lb-x" aria-label="Cerrar la galería">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#m-close"></use></svg>
+        </button>
+      </div>
+      <div class="lb__stage">
+        <svg class="tone" aria-hidden="true" preserveAspectRatio="none"><rect width="100%" height="100%" fill="url(#p-tone-lo)"/></svg>
+        <button class="lb__nav lb__nav--prev" type="button" id="lb-prev" aria-label="Foto anterior">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#m-arrow"></use></svg>
+        </button>
+        <img class="lb__img" id="lb-img" alt="" />
+        <button class="lb__nav lb__nav--next" type="button" id="lb-next" aria-label="Foto siguiente">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#m-arrow"></use></svg>
+        </button>
+      </div>
+      <div class="lb__strip" id="lb-strip"></div>
+    </div>
+  </dialog>
+
   <script>
   /* ── Las barras codifican su propio identificador ──
      Cada ficha lleva un código distinto, así que su marca también.
@@ -1005,6 +1150,131 @@
         console.warn('No se pudieron cargar los productos:', err);
         grid.innerHTML = '<p class="parts__empty">Pronto añadiremos recomendaciones.</p>';
       });
+  })();
+
+  /* ══ Galería: la ficha abre un carrusel en pop-up ══
+     <dialog> nativo: el foco, el Esc y el fondo modal ya los pone el
+     navegador. Aquí solo queda el carrete y por dónde vas. */
+  (function () {
+    var GAL = {
+      'SZ/01': { t: 'Prototipos', i: [
+        ['sz01-maletin',          'Maletín impreso con un inserto interior rojo hecho a medida'],
+        ['sz01-racores',          'Caja llena de racores impresos en negro, una serie entera']
+      ]},
+      'SZ/02': { t: 'Piezas decorativas', i: [
+        ['sz02-charmander',       'Figura de Charmander sobre una pokéball, impresa en varios colores'],
+        ['sz02-conejo',           'Conejo blanco saliendo de una grieta, puesto en una nevera'],
+        ['sz02-figura-lego',      'Figura gigante tipo Lego de un futbolista con el dorsal 10'],
+        ['sz02-casco-daftpunk',   'Casco de Daft Punk impreso y lijado en blanco y negro'],
+        ['sz02-mascara-deadpool', 'Máscara de Deadpool en rojo y negro con textura de rejilla'],
+        ['sz02-lapiz',            'Lápiz gigante impreso en amarillo, sujeto en la mano']
+      ]},
+      'SZ/03': { t: 'Piezas de repuesto', i: [
+        ['sz03-engranaje',        'Engranaje helicoidal impreso en negro, delante de la impresora']
+      ]}
+    };
+    var BASE = 'assets/gallery/';
+
+    var dlg = document.getElementById('lb');
+    if (!dlg || !dlg.showModal) return;   // sin <dialog> la ficha se queda quieta, no rota
+
+    var elImg   = document.getElementById('lb-img'),
+        elCode  = document.getElementById('lb-code'),
+        elTitle = document.getElementById('lb-title'),
+        elNum   = document.getElementById('lb-num'),
+        elStrip = document.getElementById('lb-strip'),
+        key = null, idx = 0, opener = null;
+
+    function pad(n) { return (n < 10 ? '0' : '') + n; }
+    function set() { return GAL[key].i; }
+
+    function preload(n) {
+      var it = set()[n];
+      if (it) { var im = new Image(); im.src = BASE + it[0] + '.jpg'; }
+    }
+
+    function show(n) {
+      var items = set(), total = items.length;
+      idx = (n + total) % total;
+      var it = items[idx];
+      elImg.classList.remove('is-on');
+      elImg.src = BASE + it[0] + '.jpg';
+      elImg.alt = it[1];
+      elNum.textContent = pad(idx + 1) + '/' + pad(total);
+      Array.prototype.forEach.call(elStrip.children, function (b, i) {
+        b.setAttribute('aria-current', i === idx ? 'true' : 'false');
+      });
+      var act = elStrip.children[idx];
+      if (act && act.scrollIntoView) act.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      preload(idx + 1 < total ? idx + 1 : 0);
+      preload(idx - 1 >= 0 ? idx - 1 : total - 1);
+    }
+
+    elImg.addEventListener('load', function () { elImg.classList.add('is-on'); });
+
+    function open(k) {
+      key = k;
+      var g = GAL[k], items = g.i;
+      elCode.textContent = k;
+      elTitle.textContent = g.t;
+      if (items.length < 2) dlg.setAttribute('data-one', ''); else dlg.removeAttribute('data-one');
+      elStrip.textContent = '';
+      items.forEach(function (it, i) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'lb__th';
+        b.setAttribute('aria-label', 'Foto ' + (i + 1) + ': ' + it[1]);
+        var im = document.createElement('img');
+        im.src = BASE + it[0] + '-t.jpg';
+        im.alt = '';
+        im.loading = 'lazy';
+        b.appendChild(im);
+        b.addEventListener('click', function () { show(i); });
+        elStrip.appendChild(b);
+      });
+      show(0);
+      document.documentElement.classList.add('lb-on');
+      dlg.showModal();
+    }
+
+    dlg.addEventListener('close', function () {
+      document.documentElement.classList.remove('lb-on');
+      elImg.removeAttribute('src');
+      if (opener && opener.focus) opener.focus();
+    });
+
+    document.getElementById('lb-x').addEventListener('click', function () { dlg.close(); });
+    document.getElementById('lb-prev').addEventListener('click', function () { show(idx - 1); });
+    document.getElementById('lb-next').addEventListener('click', function () { show(idx + 1); });
+
+    /* clic fuera de la caja: el propio <dialog> es el suelo del modal */
+    dlg.addEventListener('click', function (e) {
+      if (e.target === dlg) dlg.close();
+    });
+
+    dlg.addEventListener('keydown', function (e) {
+      if (set().length < 2) return;
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); show(idx - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); show(idx + 1); }
+    });
+
+    /* arrastre lateral en el móvil */
+    var x0 = null;
+    dlg.addEventListener('touchstart', function (e) { x0 = e.changedTouches[0].clientX; }, { passive: true });
+    dlg.addEventListener('touchend', function (e) {
+      if (x0 === null || set().length < 2) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 45) show(idx + (dx < 0 ? 1 : -1));
+      x0 = null;
+    }, { passive: true });
+
+    Array.prototype.forEach.call(document.querySelectorAll('.cell--gal'), function (btn) {
+      var k = btn.getAttribute('data-gal');
+      if (!GAL[k]) return;
+      var n = btn.querySelector('[data-gal-n]');
+      if (n) n.textContent = pad(GAL[k].i.length);
+      btn.addEventListener('click', function () { opener = btn; open(k); });
+    });
   })();
   </script>
 </body>
